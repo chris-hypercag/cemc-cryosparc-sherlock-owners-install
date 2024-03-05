@@ -1,7 +1,7 @@
-# Installing CryoSPARC on Sherlock
+# Installing CryoSPARC in Sherlock Owner's Partition
 The following instructions are intended for Sherlock users who have permission to run the CryoSPARC GUI from the Owners partition, and to easily queue jobs in any partition they have permission to access. 
 
-Attribution: These instructions for installing CryoSPARC on Sherlock are adapted from instructions developed and published by [jnoh2](https://github.com/jnoh2/cryosparc-install/blob/main/README.md). The instructions were originally derived from [CryoSPARC's](https://guide.cryosparc.com/setup-configuration-and-management/how-to-download-install-and-configure/downloading-and-installing-cryosparc) install instructions and a presentation by Zhiyong Zhang (Stanford Research Computing), with additional credit going to Haoqing Wang for advice and debugging, and to Josh Carter for testing.
+Attribution: These instructions for installing CryoSPARC on Sherlock are adapted from instructions developed and published by [jnoh2](https://github.com/jnoh2/cryosparc-install/blob/main/README.md). The instructions were originally derived from [CryoSPARC's](https://guide.cryosparc.com/setup-configuration-and-management/how-to-download-install-and-configure/downloading-and-installing-cryosparc).
 ### Table of Contents
 * [Manual Installation Steps](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-install/blob/main/README.md#manual-installation-steps)
     * [Step 0: Before Installing](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-install/blob/main/README.md#step-0-before-installing)
