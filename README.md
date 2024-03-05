@@ -27,7 +27,7 @@ Before starting the install, you need to obtain a CryoSPARC license. Fill out th
 ### Step 1: Download CryoSPARC
 Log on to Sherlock from a terminal window. Once logged in start an interactive job session and replace \<group-name\> with your PI's Sherlock group name:
 ```
-sdev -t 2:00:00 -p <group-name> -g 1
+sh_dev -c 2 -g 1 -t 02:00:00
 ```
 Next, set several environment variables that will be used throughout the installation. Depending on where you want to install CryoSPARC you may want to replace $GROUP_HOME with $OAK.
 ```
