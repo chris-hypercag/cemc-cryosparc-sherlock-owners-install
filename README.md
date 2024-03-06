@@ -64,7 +64,7 @@ Install CryoSPARC Master instance
 cd $CS_PATH/cryosparc_master
 ./install.sh --license $LICENSE_ID --dbpath $CS_PATH/cryosparc_db --port $PORT_NUM --yes
 ```
-When install is complete, the file `config.sh` is created. You now have two choices, to run the CryoSPARC master from a dedicated node or from any node in your group partition. To run from a dedicated node, first find the hostname of the node your goup is running from. In your prefered text editor (i.e. vim, nano), open `config.sh`, and modify the third line `export CRYOSPARC_MASTER_HOSTNAME="sh##-##n##.int"` to look like this: `export CRYOSPARC_MASTER_HOSTNAME=<hostname>` where \<hostname\> is the dedicated node hostname. To genearlize CryoSPARC to run from any group partition node, open `config.sh` in your prefered text editor (i.e. vim, nano), and modify and comment out the third line `export CRYOSPARC_MASTER_HOSTNAME="sh##-##n##.int"` to look like this: `#export CRYOSPARC_MASTER_HOSTNAME=$(hostname)`. Now, below this line add the following line `export CRYOSPARC_FORCE_HOSTNAME=true`. Save the changes and exit the text editor to return to the terminal.
+When install is complete, the file `config.sh` is created. We now want to genearlize the CryoSPARC master instance to run from any node on Sherlock. Open `config.sh` in your prefered text editor (i.e. vim, nano), and comment out the third line `export CRYOSPARC_MASTER_HOSTNAME="shXX-XXnXX.int"` by adding a `#` at the begining of the line. It should look like this: `#export CRYOSPARC_MASTER_HOSTNAME="shXX-XXnXX.int"`. Now, below this line add the following line `export CRYOSPARC_FORCE_HOSTNAME=true`. Save the changes and exit the text editor to return to the terminal.
 
 Next, start the CryoSPARC master instance
 ```
@@ -82,9 +82,12 @@ ml cuda/11.7.1
 cd $CS_PATH
 ```
 ### Step 3: Create Submission Scripts
-Now let's set your group name as an environment variable to automate the next steps
+Now let's set your group name as an environment variable to automate the next steps,
 ```
 export GROUPNAME=<group-name>
+```
+```
+export MASTERNODE=<master node hostname>
 ```
 Next, enable the master instance to run jobs on Sherlock. For this you will need the files `cluster_info.json`, `cluster_script.sh`, and `cs-master.sh`. Copy and paste the following code blocks into the terminal. Clicking the copy icon in the upper right hand corner of the code block will insure the entire field is copied. The `cat` command will automatically concatenate the lines in between it and the end-of-file marker (EOF) and pass it to file named `cluster_info.json`. 
 ```
@@ -147,6 +150,7 @@ cat <<EOF >  cs-master.sh
 #SBATCH --dependency=singleton
 #
 #SBATCH --partition=$GROUPNAME
+#SBATCH --nodelist=$MASTERNODE
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2
