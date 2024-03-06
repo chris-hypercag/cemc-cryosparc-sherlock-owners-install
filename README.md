@@ -87,7 +87,7 @@ Now let's set your group name as an environment variable to automate the next st
 export GROUPNAME=<group-name>
 ```
 ```
-export MASTERNODE=<master node hostname>
+export MASTERNODE=<master-node-hostname>
 ```
 Next, enable the master instance to run jobs on Sherlock. For this you will need the files `cluster_info.json`, `cluster_script.sh`, and `cs-master.sh`. Copy and paste the following code blocks into the terminal. Clicking the copy icon in the upper right hand corner of the code block will insure the entire field is copied. The `cat` command will automatically concatenate the lines in between it and the end-of-file marker (EOF) and pass it to file named `cluster_info.json`. 
 ```
