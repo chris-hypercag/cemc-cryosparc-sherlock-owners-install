@@ -308,7 +308,7 @@ Make sure you are in the directory that contains `cluster_script.sh` and `cluste
 4. Add the Key-Value pair for which the "Key" is your variable name WITHOUT curly braces and spaces (i.e. `partition_requested`), and the "Value" should be the default for your parameter. In this example, you would add the following:
 - Key = partition_requested | Value = normal
 
-## Adding users to your CryoSPARC instance
+## Adding users to your CryoSPARC Instance
 CryoSPARC handles its users internally and seperate from Shelock. If you plan on sharing your CryoSPARC instance with another user, they need a Sherlock account but do not need to be added to your PI's group. The other user needs a Sherlock account in order create the ssh tunnel. This also provides a minimum level of security because CryoSPARC user accounts are not cryptographically secure. Moreover, when the new user runs CryoSPARC jobs, those jobs will be executed under the Sherlock user id that started the CryoSPARC master instance. This can be detrimental to your Slurm Fairshare score and result in longer queue wait times. 
 
 To create a new user on your CryoSPARC, click on the key icon on the left-hand side of the window and follow the steps for creating a new user. It will generate a token that you need to share with the new user so they can set up their login credentials. You will also need to share the port number of your cryoSPARC instance and the node hostname it is running on. When creating the ssh tunnel, the new user will follow the steps in [Connect to the CryoSPARC GUI](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#connect-to-the-cryosparc-gui) using their own SUNet ID. Do NOT share your SUNet login credentials. 
