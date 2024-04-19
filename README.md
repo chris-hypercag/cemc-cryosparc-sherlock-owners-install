@@ -19,6 +19,7 @@ Attribution: These instructions for installing CryoSPARC on Sherlock are adapted
     * [Step 2: Edit your submission script](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#step-2-edit-your-submission-script)
     * [Step 3: Connect the new job submission script to CryoSPARC](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#step-3-connect-the-new-job-submission-script-to-cryosparc)
     * [Step 4: Indicate the use of the parameter on the CryoSPARC GUI](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#step-4-indicate-the-use-of-the-parameter-on-the-cryosparc-gui)
+* [Adding Users to your CryoSPARC Instance](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#adding-users-to-your-cryosparc-instance)
          
 ## Manual Installation Steps
 ### Step 0: Before Installing
