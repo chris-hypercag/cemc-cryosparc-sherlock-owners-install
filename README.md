@@ -13,6 +13,7 @@ Attribution: These instructions for installing CryoSPARC on Sherlock are adapted
     * [Step 6: Clean Up](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#step-6-clean-up)
 * [Starting the CryoSPARC GUI after Installation](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#starting-the-cryosparc-gui-after-installation)
     * [Connect to the CryoSPARC GUI](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#connect-to-the-cryosparc-gui)
+    * [GUI Not Connecting](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#gui-not-connecting)
     * [Submit Jobs](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#submit-jobs)
 * [Adding Additional Parameters for the Submission Script](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#adding-additional-parameters-for-the-submission-script)
     * [Step 1: Name the variable for you want to modify](https://github.com/chris-hypercag/cemc-cryosparc-sherlock-owners-install/blob/main/README.md#step-1-name-the-variable-for-you-want-to-modify)
