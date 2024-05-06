@@ -122,7 +122,7 @@ cat <<EOF >  cluster_script.sh
 #SBATCH --nodes=1
 #SBATCH --ntasks={{ num_cpu }}
 #SBATCH --gpus={{ num_gpu }}
-#SBATCH --mem={{ (ram_gb*2)|int }}G
+#SBATCH --mem={{ (ram_gb|int)*(ram_multi|int) }}G
 #
 #SBATCH --time={{ time_requested }}
 #
@@ -218,6 +218,7 @@ Now we will add Key-Value pairs to CryoSPARC's cluster configuration tab. This w
 - Key = time_requested | Value = 01:00:00
 - Key = partition_requested | Value = normal
 - Key = sunetid | Value = \<SUNetID\>
+- Key = ram_multi | value = 1
 
 ### Step 6: Clean Up 
 At this point both the master and worker instances are installed and configured for Sherlock. However, since the master instance is running in a time-limited interactive session, it is not prudent to start a new CryoSPARC project. For that you will need to run the master instance as a Sherlock job. 
