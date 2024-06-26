@@ -34,7 +34,7 @@ sh_dev -c 2 -g 1 -t 02:00:00
 Next, set several environment variables that will be used throughout the installation. Depending on where you want to install CryoSPARC you may want to replace $GROUP_HOME with $OAK.
 ```
 export SUNETID=$USER
-export CS_PATH=$GROUP_HOME/$USER/cryosparc/4.4.1
+export CS_PATH=$GROUP_HOME/$USER/cryosparc
 ```
 Next, pick a five-digit number ending in 0 between 49160 and 65530, that does not conflict with your fellow lab members, and use it as your \<PORTNum\>. The port number tells CryoSPARC where to output the GUI when creating an ssh tunnel from your browser.
 ```
