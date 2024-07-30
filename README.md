@@ -31,12 +31,21 @@ Log on to Sherlock from a terminal window. Once logged in start an interactive j
 ```
 sh_dev -c 2 -g 1 -t 02:00:00
 ```
-Next, set several environment variables that will be used throughout the installation. Depending on where you want to install CryoSPARC you may want to replace $GROUP_HOME with $OAK.
+Next, lets set several environment variables that will be used throughout the installation. The first will be your SUNetID,
 ```
 export SUNETID=$USER
+```
+Next you need to decide where to install cryosparc. The default option is in your group home.
+```
 export CS_PATH=$GROUP_HOME/$USER/cryosparc
 ```
-Next, pick a five-digit number ending in 0 between 49160 and 65530, that does not conflict with your fellow lab members, and use it as your \<PORTNum\>. The port number tells CryoSPARC where to output the GUI when creating an ssh tunnel from your browser.
+Or, if your Lab has purchased the service, Oak storage is also an option. 
+```
+export CS_PATH=$OAK/$USER/cryosparc
+```
+Some users may have access to multiple Oak directories; the command above defaults to the directory stored in the $OAK environment variable. (Type `echo $OAK` to see the path.) One factor to keep in mind when choosing an install directory is disk space availablity. As your projects grow so does your CryoSPARC database, so you will want a location with plenty of storage. (It is possible to migrate the database if you run out of disk space.) 
+
+Next, pick a five-digit number ending in 0 between 49160 and 65530, that does not conflict with your fellow lab members, and use it as your \<PORTNum\>. The port number tells CryoSPARC where to output the GUI when creating an ssh tunnel from your browser. Also, note that choice of port number is permanent; changing it after installation causes the CryoSPARC master instance to not start.
 ```
 export PORT_NUM=<PORTNum>
 ```
